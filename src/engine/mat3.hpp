@@ -6,7 +6,7 @@
 namespace engine {
 
 struct Mat3 {
-    float m[9];
+    float m[9]; // row-major: [a b tx / c d ty / 0 0 1]
     static Mat3 identity();
     static Mat3 translation(Vec2 t);
     static Mat3 rotation(float radians);
