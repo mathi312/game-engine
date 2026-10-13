@@ -3,8 +3,6 @@
 #include <vector>
 #include <deque>
 
-using namespace std;
-
 namespace engine {
 
 struct Entity {
@@ -15,8 +13,8 @@ struct Entity {
 
 class EntityPool {
 private:
-    vector<Entity> entities;
-    deque<uint32_t> freeList;
+    std::vector<Entity> entities;
+    std::deque<uint32_t> freeList;
 
 public:
     Entity create();
@@ -26,4 +24,4 @@ public:
     Entity handleFor(uint32_t index) const;
 };
 
-}
+} // namespace engine

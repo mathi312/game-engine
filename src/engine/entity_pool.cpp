@@ -45,4 +45,4 @@ Entity EntityPool::handleFor(uint32_t index) const {
     return entities[index];
 }
 
-} // namespace
+} // namespace engine
