@@ -33,7 +33,8 @@ public:
         const uint32_t index = sparse[id];
         const uint32_t last = static_cast<uint32_t>(dense.size() - 1);
 
-        if (index != last) {                      // swap-and-pop
+        // swap-and-pop
+        if (index != last) {
             const uint32_t lastId = denseIds[last];
             dense[index] = std::move(dense[last]);
             denseIds[index] = lastId;
